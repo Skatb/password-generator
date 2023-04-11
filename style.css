@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(87, 12, 199);
+}
+
+.passBlock {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+}
+.title {
+    text-transform: uppercase;
+    text-align: center;
+}
+.passwordArea {
+    display: flex;
+    gap: 15px;
+}
+
+.password {
+}
+.copy {
+    background-color: transparent;
+    cursor: pointer;
+}
+.copy img {
+    height: 24px;
+    width: 24px;
+}
+.checkboxBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.passwordLength {
+    width: 50px;
+}
+.checkboxInput {
+}
+.checkboxLabel {
+    text-align: start;
+    width: 100%;
+    color: #fff;
+}
+.includeUpperCaseLetter {
+}
+.includeLowerCaseLetter {
+}
+.includeNumbers {
+}
+.includeSymbols {
+}
+.generatePassword {
+}

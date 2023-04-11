@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password generator</title>
+</head>
+
+<body>
+
+    <div class="passBlock">
+        <h1 class="title">password generator</h1>
+        <div class="passwordArea">
+            <input type="text" class="password">
+            <button class="copy"><img src="img/copy.png" alt="copy"></button>
+        </div>
+
+        <div class="checkboxBlock">
+            <label for="passwordLength" class="checkboxLabel">password length</label>
+            <input type="number" value="6" min="6" max="20" class="passwordLength" id="passwordLength">
+        </div>
+
+        <div class="checkboxBlock">
+            <label for="includeUpperCaseLetter" class="checkboxLabel">Include Uppercase Letter</label>
+            <input type="checkbox" class="includeUpperCaseLetter checkboxInput" id="includeUpperCaseLetter">
+        </div>
+        <div class="checkboxBlock">
+            <label for="includeLowerCaseLetter" class="checkboxLabel">Include Lowercase Letter</label>
+            <input type="checkbox" class="includeLowerCaseLetter checkboxInput" id="includeLowerCaseLetter">
+        </div>
+        <div class="checkboxBlock">
+            <label for="includeNumbers" class="checkboxLabel">Include Numbers</label>
+            <input type="checkbox" class="includeNumbers checkboxInput" id="includeNumbers">
+        </div>
+        <div class="checkboxBlock">
+            <label for="includeSymbols" class="checkboxLabel">Include Symbols</label>
+            <input type="checkbox" class="includeSymbols checkboxInput" id="includeSymbols">
+        </div>
+
+        <button class="generatePassword">generate password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
