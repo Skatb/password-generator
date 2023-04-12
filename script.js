@@ -1,11 +1,13 @@
 const password = document.querySelector('.password')
 const copy = document.querySelector('.copy')
 const generatePassword = document.querySelector('.generatePassword')
+const copyMessage = document.querySelector(".copyMessage");
 
 const lowerCase = document.querySelector('.includeLowerCaseLetter')
 const upperCase = document.querySelector('.includeUpperCaseLetter')
 const symbol = document.querySelector('.includeSymbols')
 const number = document.querySelector('.includeNumbers')
+
 
 const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const lowerLetters = 'abcdefghijklmnopqrstuvwxyz'
@@ -14,19 +16,23 @@ const symbols = '!@#$%^&*()_+='
 
 generatePassword.addEventListener('click', createPass);
 
-copy.addEventListener('click', function() {
+copy.addEventListener('click', function () {
     const textToCopy = password.value;
     navigator.clipboard.writeText(textToCopy)
-      .then(() => {
-        password.blur();
-        console.log('Text copied to clipboard');
-      })
-      .catch(err => {
-        console.error('Could not copy text: ', err);
-      });
-  });
+        .then(() => {
+            password.blur();
+            copyMessage.style.opacity = "1";
+            setTimeout(function () {
+                copyMessage.style.opacity = "0";
+            }, 2000);
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+});
 
-function createPass () {
+function createPass() {
     const passwordLength = +document.querySelector('.passwordLength').value
 
     let passwordGenarot = ''
@@ -37,7 +43,7 @@ function createPass () {
     password.value = passwordGenarot
 }
 
-function generate () {
+function generate() {
     const generateItem = []
 
     if (symbol.checked) {
@@ -63,15 +69,15 @@ function generate () {
 }
 
 
-function getSymbol () {
+function getSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
-function getNumber () {
+function getNumber() {
     return digits[Math.floor(Math.random() * digits.length)]
 }
-function getUpper () {
+function getUpper() {
     return upperLetters[Math.floor(Math.random() * upperLetters.length)]
 }
-function getLower () {
+function getLower() {
     return lowerLetters[Math.floor(Math.random() * lowerLetters.length)]
 }

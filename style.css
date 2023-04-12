@@ -1,62 +1,134 @@
 body {
-    background-color: rgb(87, 12, 199);
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
 }
 
 .passBlock {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 400px;
     align-items: center;
     text-align: center;
     margin: 0 auto;
     margin-top: 10%;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
+
 .title {
+    font-size: 24px;
+    font-weight: bold;
     text-transform: uppercase;
-    text-align: center;
+    margin-bottom: 20px;
 }
+
 .passwordArea {
     display: flex;
+    align-items: center;
     gap: 15px;
+    margin-top: 30px;
 }
 
 .password {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
 }
+
 .copy {
-    background-color: transparent;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
+
+.copy:hover {
+    background-color: #e5e5e5;
+}
+
 .copy img {
     height: 24px;
     width: 24px;
 }
+
+.copyMessage {
+    opacity: 0;
+    color: #4CAF50;
+    padding-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
 .checkboxBlock {
-    width: 100%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 280px;
     justify-content: space-between;
 }
+
 .passwordLength {
-    width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
 }
+
 .checkboxInput {
+    margin-left: 10px;
+    margin-right: 10px;
+    appearance: none;
+    width: 24px;
+    height: 20px;
+    background-color: #d7cfcf;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
 }
+
+.checkboxInput:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
 .checkboxLabel {
-    text-align: start;
+    font-size: 16px;
+    margin-left: 5px;
     width: 100%;
-    color: #fff;
+    text-align: start;
 }
-.includeUpperCaseLetter {
-}
-.includeLowerCaseLetter {
-}
-.includeNumbers {
-}
-.includeSymbols {
-}
+
 .generatePassword {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.generatePassword:hover {
+    background-color: #3e8e41;
 }
